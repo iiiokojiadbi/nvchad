@@ -14,3 +14,5 @@ require "nvchad.options"
 
 vim.wo.number = true
 vim.wo.relativenumber = true
+vim.opt.scrolloff = 6
+vim.opt.wrap = false
