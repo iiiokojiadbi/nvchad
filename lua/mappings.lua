@@ -12,5 +12,5 @@ end, { desc = "Close All Buffers" })
 -- Basic
 
 map("i", "jj", "<ESC>")
-
+map("n", "<leader>e", ":Neotree float toggle reveal<CR>")
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
