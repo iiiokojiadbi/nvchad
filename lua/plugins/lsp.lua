@@ -14,6 +14,7 @@ return {
         "html",
         "cssls",
         "ts_ls",
+        "lua_ls",
       }
 
       -- lsps with default config
@@ -21,6 +22,11 @@ return {
         lspconfig[lsp].setup {
           on_attach = on_attach,
           capabilities = capabilities,
+          settings = {
+            Lua = {
+              diagnostics = { globals = { "vim", "require" } },
+            },
+          },
         }
       end
 

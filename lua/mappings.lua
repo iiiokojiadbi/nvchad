@@ -12,8 +12,8 @@ map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save" })
 map("i", "jj", "<ESC>")
 
 -- Разделение экрана
-vim.keymap.set("n", "|", ":vsplit<CR>", { desc = "Вертикальный буфер" })
-vim.keymap.set("n", "\\", ":split<CR>", { desc = "Горизонтальный буфер" })
+map("n", "|", ":vsplit<CR>", { desc = "Вертикальный буфер" })
+map("n", "\\", ":split<CR>", { desc = "Горизонтальный буфер" })
 
 -- Terminal
 map("n", "<C-]>", function()
@@ -41,9 +41,9 @@ map("n", "<leader>cx", function()
 end, { desc = "Удалить все буферы" })
 
 -- Trouble
-map("n", "<leader>qx", "<cmd>TroubleToggle<CR>", { desc = "Open Trouble" })
-map("n", "<leader>qw", "<cmd>TroubleToggle workspace_diagnostics<CR>", { desc = "Open Workspace Trouble" })
-map("n", "<leader>qd", "<cmd>TroubleToggle document_diagnostics<CR>", { desc = "Open Document Trouble" })
-map("n", "<leader>qq", "<cmd>TroubleToggle quickfix<CR>", { desc = "Open Quickfix" })
-map("n", "<leader>ql", "<cmd>TroubleToggle loclist<CR>", { desc = "Open Location List" })
-map("n", "<leader>qt", "<cmd>TodoTrouble<CR>", { desc = "Open Todo Trouble" })
+-- map("n", "<leader>qx", "<cmd>TroubleToggle<CR>", { desc = "Open Trouble" })
+-- map("n", "<leader>qw", "<cmd>TroubleToggle workspace_diagnostics<CR>", { desc = "Open Workspace Trouble" })
+-- map("n", "<leader>qd", "<cmd>TroubleToggle document_diagnostics<CR>", { desc = "Open Document Trouble" })
+-- map("n", "<leader>qq", "<cmd>TroubleToggle quickfix<CR>", { desc = "Open Quickfix" })
+-- map("n", "<leader>ql", "<cmd>TroubleToggle loclist<CR>", { desc = "Open Location List" })
+-- map("n", "<leader>qt", "<cmd>TodoTrouble<CR>", { desc = "Open Todo Trouble" })
