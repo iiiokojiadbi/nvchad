@@ -24,6 +24,12 @@ map("n", "<c-h>", "<cmd>:TmuxNavigateLeft<cr>", { desc = "Tmux Left" })
 map("n", "<c-k>", "<cmd>:TmuxNavigateUp<cr>", { desc = "Tmux Up" })
 map("n", "<c-j>", "<cmd>:TmuxNavigateDown<cr>", { desc = "Tmux Down" })
 
+-- Git
+map("n", "<leader>gl", ":Flog<CR>", { desc = "Git Log" })
+map("n", "<leader>gf", ":DiffviewFileHistory<CR>", { desc = "Git File History" })
+map("n", "<leader>gc", ":DiffviewOpen HEAD~1<CR>", { desc = "Git Last Commit" })
+map("n", "<leader>gt", ":DiffviewToggleFile<CR>", { desc = "Git File History" })
+
 -- Terminal
 map("n", "<C-]>", function()
   require("nvchad.term").toggle { pos = "vsp", size = 0.4 }
