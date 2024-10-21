@@ -7,16 +7,16 @@ local map = vim.keymap.set
 
 -- Основные
 map("i", "jj", "<ESC>")
-map("n", ";", ":", { desc = "CMD enter command mode" })
-map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save" })
+-- map("n", ";", ":", { desc = "CMD enter command mode" })
+map("n", "<leader>w", "<cmd>w<CR>", { desc = "Сохранить" })
 
 -- Разделение экрана
 -- map("n", "|", ":vsplit<CR>", { desc = "Вертикальный буфер" })
 -- map("n", "\\", ":split<CR>", { desc = "Горизонтальный буфер" })
 
 -- Tmux
-map("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find Todo" })
-map("n", "\\", "<cmd>:vsplit <CR>", { desc = "Вертикальный буфер" })
+-- map("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find Todo" })
+map("n", "\\", "<cmd>:vsplit<CR>", { desc = "Вертикальный буфер" })
 map("n", "|", "<cmd>:split<CR>", { desc = "Горизонтальный буфер" })
 map("n", "<c-l>", "<cmd>:TmuxNavigateRight<cr>", { desc = "Tmux вправо" })
 map("n", "<c-h>", "<cmd>:TmuxNavigateLeft<cr>", { desc = "Tmux Left" })
@@ -55,7 +55,7 @@ map("n", "<leader>cx", function()
 end, { desc = "Удалить все буферы" })
 
 -- Trouble
-map("n", "<leader>qx", "<cmd>Trouble diagnostics toggle focus=true<CR>", { desc = "Open Trouble" })
+map("n", "<leader>qx", "<cmd>Trouble diagnostics toggle focus=true<CR>", { desc = "Trouble" })
 map("n", "<leader>qw", "<cmd>Trouble workspace_diagnostics<CR>", { desc = "Open Workspace Trouble" })
 map("n", "<leader>qd", "<cmd>Trouble document_diagnostics<CR>", { desc = "Open Document Trouble" })
 map("n", "<leader>qq", "<cmd>Trouble quickfix<CR>", { desc = "Open Quickfix" })
