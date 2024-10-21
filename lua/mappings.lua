@@ -5,11 +5,10 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
+-- Основные
+map("i", "jj", "<ESC>")
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save" })
--- Основные
-
-map("i", "jj", "<ESC>")
 
 -- Разделение экрана
 -- map("n", "|", ":vsplit<CR>", { desc = "Вертикальный буфер" })
@@ -19,7 +18,7 @@ map("i", "jj", "<ESC>")
 map("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find Todo" })
 map("n", "\\", "<cmd>:vsplit <CR>", { desc = "Вертикальный буфер" })
 map("n", "|", "<cmd>:split<CR>", { desc = "Горизонтальный буфер" })
-map("n", "<c-l>", "<cmd>:TmuxNavigateRight<cr>", { desc = "Tmux Right" })
+map("n", "<c-l>", "<cmd>:TmuxNavigateRight<cr>", { desc = "Tmux вправо" })
 map("n", "<c-h>", "<cmd>:TmuxNavigateLeft<cr>", { desc = "Tmux Left" })
 map("n", "<c-k>", "<cmd>:TmuxNavigateUp<cr>", { desc = "Tmux Up" })
 map("n", "<c-j>", "<cmd>:TmuxNavigateDown<cr>", { desc = "Tmux Down" })
@@ -31,24 +30,24 @@ map("n", "<leader>gc", ":DiffviewOpen HEAD~1<CR>", { desc = "Git Last Commit" })
 map("n", "<leader>gt", ":DiffviewToggleFile<CR>", { desc = "Git File History" })
 
 -- Terminal
-map("n", "<C-]>", function()
-  require("nvchad.term").toggle { pos = "vsp", size = 0.4 }
-end, { desc = "Toogle Terminal Vertical" })
-map("n", "<C-\\>", function()
-  require("nvchad.term").toggle { pos = "sp", size = 0.4 }
-end, { desc = "Toogle Terminal Horizontal" })
 map("n", "<C-f>", function()
   require("nvchad.term").toggle { pos = "float" }
 end, { desc = "Toogle Terminal Float" })
-map("t", "<C-]>", function()
-  require("nvchad.term").toggle { pos = "vsp" }
-end, { desc = "Toogle Terminal Vertical" })
-map("t", "<C-\\>", function()
-  require("nvchad.term").toggle { pos = "sp" }
-end, { desc = "Toogle Terminal Horizontal" })
 map("t", "<C-f>", function()
   require("nvchad.term").toggle { pos = "float" }
 end, { desc = "Toogle Terminal Float" })
+-- map("n", "<C-]>", function()
+--   require("nvchad.term").toggle { pos = "vsp", size = 0.4 }
+-- end, { desc = "Toogle Terminal Vertical" })
+-- map("n", "<C-\\>", function()
+--   require("nvchad.term").toggle { pos = "sp", size = 0.4 }
+-- end, { desc = "Toogle Terminal Horizontal" })
+-- map("t", "<C-]>", function()
+--   require("nvchad.term").toggle { pos = "vsp" }
+-- end, { desc = "Toogle Terminal Vertical" })
+-- map("t", "<C-\\>", function()
+--   require("nvchad.term").toggle { pos = "sp" }
+-- end, { desc = "Toogle Terminal Horizontal" })
 
 -- Tabufline
 map("n", "<leader>cx", function()
