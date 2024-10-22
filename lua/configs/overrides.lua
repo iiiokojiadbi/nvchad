@@ -33,6 +33,7 @@ M.mason = {
     "prettier",
     "eslint_d",
     "rust_analyzer",
+    "json-lsp",
   },
 }
 

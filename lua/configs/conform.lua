@@ -8,10 +8,10 @@ local options = {
     typescript = { "prettier" },
     javascriptreact = { "prettier" },
     typescriptreact = { "prettier" },
-    json = { "prettier" },
     toml = { "prettier" },
     yaml = { "prettier" },
     markdown = { "prettier" },
+    json = { "prettier" },
   },
   format_on_save = {
     -- These options will be passed to conform.format()

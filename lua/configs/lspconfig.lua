@@ -11,6 +11,7 @@ local servers = {
   "cssls",
   "ts_ls",
   "lua_ls",
+  "jsonls",
 }
 
 -- lsps with default config
@@ -21,6 +22,10 @@ for _, lsp in ipairs(servers) do
     settings = {
       Lua = {
         diagnostics = { globals = { "vim", "require" } },
+      },
+      json = {
+        schemas = require("schemastore").json.schemas(),
+        validate = { enable = true },
       },
     },
   }
