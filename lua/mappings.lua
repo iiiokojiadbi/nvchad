@@ -19,23 +19,24 @@ map("n", "<leader>w", "<cmd>w<CR>", { desc = "Сохранить" })
 map("n", "\\", "<cmd>:vsplit<CR>", { desc = "Вертикальный буфер" })
 map("n", "|", "<cmd>:split<CR>", { desc = "Горизонтальный буфер" })
 map("n", "<c-l>", "<cmd>:TmuxNavigateRight<cr>", { desc = "Tmux вправо" })
-map("n", "<c-h>", "<cmd>:TmuxNavigateLeft<cr>", { desc = "Tmux Left" })
-map("n", "<c-k>", "<cmd>:TmuxNavigateUp<cr>", { desc = "Tmux Up" })
-map("n", "<c-j>", "<cmd>:TmuxNavigateDown<cr>", { desc = "Tmux Down" })
+map("n", "<c-h>", "<cmd>:TmuxNavigateLeft<cr>", { desc = "Tmux влево" })
+map("n", "<c-k>", "<cmd>:TmuxNavigateUp<cr>", { desc = "Tmux вверх" })
+map("n", "<c-j>", "<cmd>:TmuxNavigateDown<cr>", { desc = "Tmux вниз" })
 
 -- Git
-map("n", "<leader>gl", ":Flog<CR>", { desc = "Git Log" })
-map("n", "<leader>gf", ":DiffviewFileHistory<CR>", { desc = "Git File History" })
-map("n", "<leader>gc", ":DiffviewOpen HEAD~1<CR>", { desc = "Git Last Commit" })
-map("n", "<leader>gt", ":DiffviewToggleFile<CR>", { desc = "Git File History" })
+map("n", "<leader>gg", ":Git<CR>", { desc = "Git открыть" })
+map("n", "<leader>gl", ":Flog<CR>", { desc = "Git лог" })
+map("n", "<leader>gf", ":DiffviewFileHistory<CR>", { desc = "Git история файла" })
+map("n", "<leader>gc", ":DiffviewOpen HEAD~1<CR>", { desc = "Git последний коммит" })
+map("n", "<leader>gt", ":DiffviewToggleFile<CR>", { desc = "Git переключить в просмотре" })
 
 -- Terminal
 map("n", "<C-f>", function()
   require("nvchad.term").toggle { pos = "float" }
-end, { desc = "Toogle Terminal Float" })
+end, { desc = "Показать плавающий терминал" })
 map("t", "<C-f>", function()
   require("nvchad.term").toggle { pos = "float" }
-end, { desc = "Toogle Terminal Float" })
+end, { desc = "Скрыть плавающий терминал" })
 -- map("n", "<C-]>", function()
 --   require("nvchad.term").toggle { pos = "vsp", size = 0.4 }
 -- end, { desc = "Toogle Terminal Vertical" })
